@@ -1,12 +1,10 @@
 # Для каждой строки матрицы с нечетным номером найти среднее арифметическое ее
 # элементов.
+import random
 
 matrix = [
-    [-1, 0, 3, -5, 2],
-    [9, 2, 4, 5, 3],
-    [-3, -5, 9, 9, -9],
-    [1, 2, 3, 4, 5],
-    [7, -3, 8, 1, 0]
+    [random.randint(-10, 10) for _ in range(5)]
+    for _ in range(5)
 ]
 
 averages = [sum(i) / len(i) for index, i in enumerate(matrix) if index % 2 != 0]

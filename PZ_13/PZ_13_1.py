@@ -1,10 +1,10 @@
 # В матрице найти отрицательные элементы, сформировать из них новый массив.
 # Вывести размер полученного массива.
+import random
 
 matrix = [
-    [-1, 0, 3, -5, 2],
-    [9, 2, 4, 5, 3],
-    [-3, -5, 9, 9, -9]
+    [random.randint(-10, 10) for _ in range(5)]
+    for _ in range(5)
 ]
 
 negative = [j for i in matrix for j in i if j < 0]
