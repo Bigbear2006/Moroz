@@ -8,4 +8,5 @@ matrix = [
 ]
 
 negative = [j for i in matrix for j in i if j < 0]
-print(f'Количество нечетных элементов: {len(negative)}')
+print(f'Матрица: {matrix}')
+print(f'Количество отрицательных элементов: {len(negative)}')
