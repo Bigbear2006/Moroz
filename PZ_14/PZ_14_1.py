@@ -7,5 +7,6 @@ import re
 with open('Dostoevsky.txt', 'r') as f:
     data = f.read()
 
-years = re.findall(r'[0-9]{4}', data)
+years = re.findall(r"(?:[0-9]{4}–)?[0-9]{4}\s?(?:год.?|гг?\.)", data)
+print(f'Найденные даты: {years}')
 print(f'Найдено дат: {len(years)}')
